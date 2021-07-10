@@ -8,38 +8,6 @@
   <title>Dhruv Parmar</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <style>
-    label{
-      position: absolute;
-      width: 45px;
-      height: 22px;
-      right: 20px;
-      top: 20px;
-      border: 2px solid;
-      border-radius: 20px;
-    }
-    label:before{
-      position: absolute;
-      content: "";
-      width: 20px;
-      height: 20px;
-      left: 1px;
-      top: 1px;
-      border-radius: 50%;
-      cursor: pointer;
-      background: #000;
-      transition: 0.4s;
-    }
-    label.active:before{
-      left: 24px;
-      background: #fff;
-    }
-    body.night{
-      background: #000;
-      color: #fff;
-    }
-
-  </style>
 
   <!-- Favicons -->
   <link href="assets/img/Think_Different.png" rel="icon">
@@ -97,11 +65,6 @@
           <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
           <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
           <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
-          <li>
-            <section>
-              <label id="dark-change"></label>
-            </section>
-          </li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -698,15 +661,7 @@
     <script src="assets/vendor/aos/aos.js"></script>
 
     <!-- Template Main JS File -->
-    <script>
-      var content = document.getElementsByTagName('body')[0];
-    var darkMode = document.getElementById('dark-change');
-    darkMode.addEventListener('click', function() {
-      // body...
-      darkMode.classList.toggle('active');
-      content.classList.toggle('night');
-    })
-    </script>
+    <script src="assets/js/main.js"></script>
 
   </body>
 
