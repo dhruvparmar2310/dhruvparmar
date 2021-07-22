@@ -281,7 +281,7 @@ section {
 }
 
 .section-bg {
-  background: #f5f8fd;
+  background: #99EDfd;
 }
 
 .section-title {
@@ -340,11 +340,17 @@ section {
   margin-bottom: 0;
 }
 
+.about img{
+  border-radius: 5px;
+  box-shadow: 10px 15px 20px #888;
+}
+
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
 .facts {
   padding-bottom: 30px;
+  background: #99EDfd;
 }
 
 .facts .count-box {
@@ -355,7 +361,7 @@ section {
 .facts .count-box i {
   display: block;
   font-size: 44px;
-  color: #149ddd;
+  color: #199dDD;
   float: left;
 }
 
@@ -373,7 +379,7 @@ section {
   margin: 0 0 0 60px;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
-  color: #122f57;
+  color: #222;
 }
 
 .facts .count-box a {
@@ -388,6 +394,211 @@ section {
 
 .facts .count-box a:hover {
   color: #1f5297;
+}
+
+
+/*--------------------------------------------------------------
+# service
+--------------------------------------------------------------*/
+.featured-services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.featured-services .icon-box::before {
+  content: '';
+  position: absolute;
+  background: #d9f1f2;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.featured-services .icon-box:hover::before {
+  background: #3fbbc0;
+  top: 0;
+  border-radius: 0px;
+}
+
+.featured-services .icon {
+  margin-bottom: 15px;
+}
+
+.featured-services .icon i {
+  font-size: 48px;
+  line-height: 1;
+  color: #3fbbc0;
+  transition: all 0.3s ease-in-out;
+}
+
+.featured-services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.featured-services .title a {
+  color: #111;
+}
+
+.featured-services .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.featured-services .icon-box:hover .title a, .featured-services .icon-box:hover .description {
+  color: #fff;
+}
+
+.featured-services .icon-box:hover .icon i {
+  color: #fff;
+}
+
+.services .icon-box {
+  margin-bottom: 20px;
+}
+
+.services .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: #3fbbc0;
+  overflow: hidden;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.services .icon i {
+  font-size: 36px;
+  line-height: 0;
+}
+
+.services .icon-box:hover .icon {
+  box-shadow: 0px 0 25px rgba(63, 187, 192, 0.3);
+}
+
+.services .title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.services .title a {
+  color: #444444;
+  transition: 0.3s;
+}
+
+.services .title a:hover {
+  color: #3fbbc0;
+}
+
+.services .title::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 2px;
+  background: #3fbbc0;
+  bottom: 0;
+}
+
+.services .description {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+
+/*--------------------------------------------------------------
+# Slider
+--------------------------------------------------------------*/
+.slider{
+  height: 350px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items : center;
+  overflow: hidden;
+}
+
+.slide-track{
+  display: flex;
+  width: calc(250px * 18);
+  animation: scroll 40s linear infinite;
+}
+
+.slide-track:hover{
+  animation-play-state: paused;
+}
+
+@keyframes scroll{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+.slide{
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+img{
+  width: 100%;
+  transition: transform 1s;
+}
+
+img:hover{
+  transform: translateZ(20px);
+}
+
+
+/*--------------------------------------------------------------
+# Slider shadow
+--------------------------------------------------------------*/
+.slider::before,
+.slider::after{
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slider::before{
+  left: 0;
+  top: 0;
+}
+
+.slider::after{
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
 }
 
 /*--------------------------------------------------------------
@@ -484,6 +695,114 @@ section {
   top: 0;
   background: #fff;
   border: 2px solid #1f5297;
+}
+
+/*--------------------------------------------------------------
+# My Work Card
+--------------------------------------------------------------*/
+.container .card{
+  position: relative;
+  max-width: 300px;
+  height: 150px;
+  background: #149ddd;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover{
+  height: auto;
+}
+
+.container .card .imgBx{
+  position: relative;
+  width: 260px;
+  height: auto;
+  top: -60px;
+  left: 5px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .imgBx1{
+ position: relative;
+  width: 120px;
+  height: auto;
+  top: -60px;
+  left: 12vh;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.container .card .imgBx1 img{
+  width: 120px;
+  height: 170px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.container .card .imgBx img{
+  width: 100%;
+  height: 130px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.container .card .content h4{
+  color: black;
+}
+
+h4:hover span:nth-child(1){
+  margin-right: 5px;
+}
+
+.container .card .content h4:hover{
+  color: white;
+  transition: 0.5s;
+  text-shadow: 0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 80px #fff,
+                0 0 120px #fff,
+                0 0 160px #fff,
+                0 0 180px #fff;
+}
+
+.container .card .content a{
+  color: white;
+}
+
+.container .card .content a:hover{
+  color: white;
+  transition: 0.5s;
+  text-shadow: 0 0 10px black,
+                0 0 20px black,
+                0 0 80px black,
+                0 0 120px black,
+                0 0 160px black,
+                0 0 180px black;
+}
+
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
+  font-style: italic;
+  font-family: monospace;
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -600,10 +919,10 @@ section {
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #149ddd;
+  background: #99EDfd;
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #149ddd;
+  border: 2px solid white;
 }
 
 .services .icon i {
@@ -616,7 +935,7 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-  color: #149ddd;
+  color: #99EDfd;
 }
 
 .services .title {
@@ -631,7 +950,11 @@ section {
 }
 
 .services .title a:hover {
-  color: #149ddd;
+  color: white;
+  transition: 0.5s;
+  text-shadow: 0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 80px #fff;
 }
 
 .services .description {
