@@ -350,7 +350,6 @@ section {
 --------------------------------------------------------------*/
 .facts {
   padding-bottom: 30px;
-  background: #99EDfd;
 }
 
 .facts .count-box {
@@ -639,6 +638,10 @@ img:hover{
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume{
+  background: #99EDfd;
+}
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
