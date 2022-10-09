@@ -26,6 +26,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+:root{
+  --new-theme: #7c00d3;
+} 
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -352,6 +357,34 @@ section {
   padding-bottom: 30px;
 }
 
+.facts .section-title h2{ 
+  color: var(--new-theme);
+  text-align: center;
+  margin-bottom: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.facts .section-title h2::after{
+  content: '';
+  position: absolute;
+  left: 44.8%;
+  bottom: 18px;
+  display: block;
+  width: 10%;
+  height: 3px;
+  background-color: #000;
+}
+
+.facts .section-title p{
+  font-family: 'Itim';
+  text-align: center;
+}
+
+.facts .no-gutters{
+  display: flex;
+  justify-content: center;
+}
+
 .facts .count-box {
   padding: 30px;
   width: 100%;
@@ -360,7 +393,7 @@ section {
 .facts .count-box i {
   display: block;
   font-size: 44px;
-  color: #199dDD;
+  color: var(--new-theme);
   float: left;
 }
 
@@ -375,8 +408,8 @@ section {
 
 .facts .count-box p {
   padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
-  font-family: "Raleway", sans-serif;
+  margin: 0;
+  font-family: 'Itim';
   font-size: 14px;
   color: #222;
 }
@@ -525,8 +558,35 @@ section {
 
 
 /*--------------------------------------------------------------
-# Slider
+# Slider and Gallery
 --------------------------------------------------------------*/
+.gallery {
+  padding-bottom: 30px;
+}
+
+.gallery .section-title h2{ 
+  color: var(--new-theme);
+  text-align: center;
+  margin-bottom: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.gallery .section-title h2::after{
+  content: '';
+  position: absolute;
+  left: 44.8%;
+  bottom: 18px;
+  display: block;
+  width: 10%;
+  height: 3px;
+  background-color: #000;
+}
+
+.gallery .section-title p{
+  font-family: 'Itim';
+  text-align: center;
+}
+
 .slider{
   height: 350px;
   margin: auto;
@@ -639,7 +699,8 @@ img:hover{
 # Resume
 --------------------------------------------------------------*/
 .resume{
-  background: #99EDfd;
+  background: var(--new-theme);
+  box-shadow: inset 0 0 20px #222;
 }
 
 .resume .resume-title {
@@ -650,11 +711,40 @@ img:hover{
   color: #050d18;
 }
 
+.resume .section-title h2{ 
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: -5px 5px 5px #000;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.resume .section-title h2::after{
+  content: '';
+  position: absolute;
+  left: 38%;
+  bottom: 12px;
+  display: block;
+  width: 25%;
+  height: 3px;
+  background-color: #000;
+  box-shadow: -5px 5px 5px #000;
+}
+
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
   border-left: 2px solid #1f5297;
   position: relative;
+}
+
+.resume .section-title th{
+  color: #000;
+  font-weight: 800;
+  font-family: 'Itim'; 
+  letter-spacing: 1px; 
+  font-size: 20px;
+  text-shadow: -2px 2px 5px #000;
 }
 
 .resume .resume-item h4 {
@@ -707,7 +797,7 @@ img:hover{
   position: relative;
   max-width: 300px;
   height: 150px;
-  background: #149ddd;
+  background: var(--new-theme);
   margin: 30px 10px;
   padding: 20px 15px;
   display: flex;
@@ -720,6 +810,10 @@ img:hover{
   height: auto;
 }
 
+.container .card img{
+  filter: brightness(98%);
+}
+
 .container .card .imgBx{
   position: relative;
   width: 260px;
@@ -727,7 +821,7 @@ img:hover{
   top: -60px;
   left: 5px;
   z-index: 1;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .container .card .imgBx1{
@@ -756,6 +850,12 @@ img:hover{
 
 .container .card .content h4{
   color: black;
+  font-family: 'Itim';
+  transition: 0.5s;
+}
+
+.container .card .content p{
+  font-family: 'Itim';
 }
 
 h4:hover span:nth-child(1){
@@ -764,13 +864,8 @@ h4:hover span:nth-child(1){
 
 .container .card .content h4:hover{
   color: white;
-  transition: 0.5s;
-  text-shadow: 0 0 10px #fff,
-                0 0 20px #fff,
-                0 0 80px #fff,
-                0 0 120px #fff,
-                0 0 160px #fff,
-                0 0 180px #fff;
+  text-shadow: 0 0 5px #f1f1f1,
+              0 0 10px #f2f2f2;
 }
 
 .container .card .content a{
@@ -811,6 +906,39 @@ h4:hover span:nth-child(1){
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.portfolio{
+  background: var(--new-theme);
+  box-shadow: inset 0 0 20px #222;
+}
+
+.portfolio .section-title h2{ 
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: -5px 5px 5px #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.portfolio .section-title h2::after{
+  content: '';
+  position: absolute;
+  left: 39.5%;
+  bottom: 10px;
+  display: block;
+  width: 20%;
+  height: 3px;
+  background-color: #000;
+  box-shadow: -2px 2px 5px #000;
+}
+
+.portfolio .section-title p{
+  font-family: 'Itim';
+  text-align: center;
+  color: #fff;
+  padding-bottom: 20px;
+  text-shadow: -2px 2px 5px #000;
+}
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
@@ -911,6 +1039,49 @@ h4:hover span:nth-child(1){
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services{
+  background: var(--new-theme);
+  box-shadow: inset 0 0 20px #222;
+}
+
+.services .section-title h2{ 
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: -5px 5px 5px #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.services .section-title h2::after{
+  content: '';
+  position: absolute;
+  left: 39.5%;
+  bottom: 10px;
+  display: block;
+  width: 20%;
+  height: 3px;
+  background-color: #000;
+  box-shadow: -2px 2px 5px #000;
+}
+
+.services .title::after{
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: #000;
+}
+
+.services .section-title p{
+  font-family: 'Itim';
+  text-align: center;
+  color: #fff;
+  padding-bottom: 20px;
+  text-shadow: -2px 2px 5px #000;
+}
+
 .services .icon-box {
   margin-bottom: 20px;
 }
@@ -922,7 +1093,7 @@ h4:hover span:nth-child(1){
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #99EDfd;
+  background: var(--new-theme);
   border-radius: 50%;
   transition: 0.5s;
   border: 2px solid white;
@@ -938,7 +1109,7 @@ h4:hover span:nth-child(1){
 }
 
 .services .icon-box:hover .icon i {
-  color: #99EDfd;
+  color: var(--new-theme);
 }
 
 .services .title {
@@ -949,7 +1120,7 @@ h4:hover span:nth-child(1){
 }
 
 .services .title a {
-  color: #343a40;
+  color: #000;
 }
 
 .services .title a:hover {
@@ -963,7 +1134,9 @@ h4:hover span:nth-child(1){
 .services .description {
   margin-left: 80px;
   line-height: 24px;
-  font-size: 14px;
+  font-size: 15px;
+  color: #fff;
+  font-family: 'Itim';
 }
 
 /*--------------------------------------------------------------
@@ -1063,7 +1236,30 @@ h4:hover span:nth-child(1){
 # Contact
 --------------------------------------------------------------*/
 .contact {
-  padding-bottom: 130px;
+  padding-bottom: 100px;
+}
+
+.contact .section-title h2{ 
+  color: var(--new-theme);
+  text-align: center;
+  margin-bottom: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact .section-title h2::after{
+  content: '';
+  position: absolute;
+  left: 44.8%;
+  bottom: 18px;
+  display: block;
+  width: 10%;
+  height: 3px;
+  background-color: #000;
+}
+
+.contact .section-title p{
+  font-family: 'Itim';
+  text-align: center;
 }
 
 .contact .info {
@@ -1075,31 +1271,35 @@ h4:hover span:nth-child(1){
 
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: var(--new-theme);
   float: left;
   width: 44px;
   height: 44px;
-  background: #dff3fc;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 8px #888;
 }
 
 .contact .info h4 {
   padding: 0 0 0 60px;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 5px;
   color: #050d18;
+  font-family: 'Itim';
 }
 
 .contact .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #173b6c;
+  font-family: 'Itim';
+  color: #666;
+  text-transform: capitalize;
 }
 
 .contact .info .email p {
@@ -1126,12 +1326,12 @@ h4:hover span:nth-child(1){
 }
 
 .contact .info .social-links a:hover {
-  background: #149ddd;
+  background: var(--new-theme);
   color: #fff;
 }
 
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #149ddd;
+  background: var(--new-theme);
   color: #fff;
 }
 
