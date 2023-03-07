@@ -715,7 +715,6 @@ img:hover{
   color: #fff;
   text-align: center;
   letter-spacing: 1px;
-  text-shadow: -5px 5px 5px #000;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -744,7 +743,6 @@ img:hover{
   font-family: 'Itim'; 
   letter-spacing: 1px; 
   font-size: 20px;
-  text-shadow: -2px 2px 5px #000;
 }
 
 .resume .resume-item h4 {
@@ -875,12 +873,6 @@ h4:hover span:nth-child(1){
 .container .card .content a:hover{
   color: white;
   transition: 0.5s;
-  text-shadow: 0 0 10px black,
-                0 0 20px black,
-                0 0 80px black,
-                0 0 120px black,
-                0 0 160px black,
-                0 0 180px black;
 }
 
 .container .card .content {
@@ -915,7 +907,6 @@ h4:hover span:nth-child(1){
   color: #fff;
   text-align: center;
   letter-spacing: 2px;
-  text-shadow: -5px 5px 5px #000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -936,7 +927,6 @@ h4:hover span:nth-child(1){
   text-align: center;
   color: #fff;
   padding-bottom: 20px;
-  text-shadow: -2px 2px 5px #000;
 }
 
 .portfolio .portfolio-item {
@@ -1048,7 +1038,6 @@ h4:hover span:nth-child(1){
   color: #fff;
   text-align: center;
   letter-spacing: 2px;
-  text-shadow: -5px 5px 5px #000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -1079,7 +1068,6 @@ h4:hover span:nth-child(1){
   text-align: center;
   color: #fff;
   padding-bottom: 20px;
-  text-shadow: -2px 2px 5px #000;
 }
 
 .services .icon-box {
